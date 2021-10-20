@@ -13,7 +13,7 @@ const menu = [
     category: "lunch",
     price: 14,
     img: "./images/mixed-plate.jpg",
-    desc: `short ribs with hawaiian mac saled and steamed rice. `,
+    desc: `short ribs with hawaiian mac saled and steamed rice `,
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const menu = [
     category: "lunch",
     price: 13.99,
     img: "./images/locos-mocos-plate.png",
-    desc: `steak under 2 fried eggs hawaiian style with mac saled and steamed rice. `,
+    desc: `steak under 2 fried eggs hawaiian style with mac saled and steamed rice, `,
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ const menu = [
     category: "dinner",
     price: 18.99,
     img: "./images/classic-hawaiian-plate.jpg",
-    desc: `all the traditional food like the old hawaiians ate back in the day.`,
+    desc: `all the traditional food like the old hawaiians ate back in the day`,
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const menu = [
     category: "desert",
     price: 4.99,
     img: "./images/hawaiian-pineapple-ice-cream.jpg",
-    desc: `sweet and savory pineapple ice cream topped with honey glazed caramel sauce topped with coconut shavings.`,
+    desc: `sweet and savory pineapple ice cream topped with honey glazed caramel sauce topped with coconut shavings`,
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const menu = [
     category: "appetizer",
     price: 3.99,
     img: "./images/island-papaya-appetizer.jfif",
-    desc: `fresh off the tree hawaii's very own papaya fruit.`,
+    desc: `fresh off the tree hawaii's very own papaya fruit`,
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ const menu = [
     category: "desert",
     price: 6.99,
     img: "./images/hawaiian-shave-ice.jpg",
-    desc: `inspired by the North Shore Oahu tradition, have your way with this sweet fulfilling icey treat with a the colors of the rainbow.`,
+    desc: `inspired by the North Shore Oahu tradition, have your way with this sweet fulfilling icey treat with a the colors of the rainbow`,
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ const menu = [
     category: "appetizer",
     price: 18.99,
     img: "./images/hawaiian-sweet-rolls-taro.jpg",
-    desc: `freshly baked island hawaiian sweet rolls with creamy coconut filled milk.`,
+    desc: `fresh baked island hawaiian sweet rolls`,
   },
 ];
 
@@ -88,7 +88,7 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 function displayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
+  displayMenu = menuItems.map(function (item) {
     return `<article class="menu-item">
           <img
             src=${item.img}
