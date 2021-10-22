@@ -13,7 +13,7 @@ const menu = [
     category: "lunch",
     price: 14,
     img: "./images/mixed-plate.jpg",
-    desc: `short ribs with hawaiian mac saled and steamed rice `,
+    desc: `Short ribs with Hawaiian mac saled and steamed rice `,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const menu = [
     category: "deserts",
     price: 6.99,
     img: "./images/malasada's.png",
-    desc: `fresh hot haupia coconut cream stuffed portugese donut.`,
+    desc: `Fresh hot Haupia coconut cream stuffed Portugese donut.`,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const menu = [
     category: "lunch",
     price: 13.99,
     img: "./images/locos-mocos-plate.png",
-    desc: `steak under 2 fried eggs hawaiian style with mac saled and steamed rice, `,
+    desc: `Steak under 2 fried eggs Hawaiian style with mac saled and steamed rice, `,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const menu = [
     category: "lunch",
     price: 16.99,
     img: "./images/kalua-pig-plate.jpg",
-    desc: `traditional kalua shredded pig with mac saled and steamed rice. The Best! `,
+    desc: `Traditional kalua shredded pig with mac saled and steamed rice. The best! `,
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ const menu = [
     category: "dinner",
     price: 18.99,
     img: "./images/classic-hawaiian-plate.jpg",
-    desc: `all the traditional food like the old hawaiians ate back in the day`,
+    desc: `All the traditional food like the old Hawaiians enjoyed back in the day`,
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ const menu = [
     category: "desert",
     price: 4.99,
     img: "./images/hawaiian-pineapple-ice-cream.jpg",
-    desc: `sweet and savory pineapple ice cream topped with honey glazed caramel sauce topped with coconut shavings`,
+    desc: `Sweet and savory Pineapple ice cream topped with honey glazed caramel sauce topped with coconut shavings`,
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ const menu = [
     category: "appetizer",
     price: 3.99,
     img: "./images/island-papaya-appetizer.jfif",
-    desc: `fresh off the tree hawaii's very own papaya fruit`,
+    desc: `Fresh off the tree Hawaii's very own papaya fruit`,
   },
   {
     id: 9,
@@ -69,26 +69,26 @@ const menu = [
     category: "desert",
     price: 6.99,
     img: "./images/hawaiian-shave-ice.jpg",
-    desc: `inspired by the North Shore Oahu tradition, have your way with this sweet fulfilling icey treat with a the colors of the rainbow`,
+    desc: `Inspired by the North Shore Oahu tradition, have your way with this sweet fulfilling icey treat with a the colors of the rainbow`,
   },
   {
     id: 10,
-    title: "hawaiian sweet rolls",
+    title: "panipopo (sweet roll in coconut milk sauce)",
     category: "appetizer",
     price: 18.99,
     img: "./images/hawaiian-sweet-rolls-taro.jpg",
-    desc: `fresh baked island hawaiian sweet rolls`,
+    desc: `Sink your teeth in Samoa's most favoured desert. Soaked in fresh coconut milk steamed into a creay sauce. `,
   },
 ];
 
-sectionCenter = document.querySelector(".section-center");
+const sectionCenter = document.querySelector(".section-center");
 
 window.addEventListener("DOMContentLoaded", function () {
-  displayMenuItems(menu);
+  showMenuItems();
 });
 
-function displayMenuItems(menuItems) {
-  displayMenu = menuItems.map(function (item) {
+function showMenuItems() {
+  displayMenu = menu.map(function (item) {
     return `<article class="menu-item">
           <img
             src=${item.img}

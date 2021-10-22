@@ -84,13 +84,14 @@ img {
 .item-info {
   text-transform: capitalize;
   color: rgba(47, 70, 97, 0.849);
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
 }
 
 .item-text {
   letter-spacing: 1px;
   max-width: 350px;
   font-size: 0.9rem;
+  text-transform: none;
 }
 
 @media screen and (min-width: 800px) {
