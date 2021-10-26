@@ -2,7 +2,7 @@ const menu = [
   {
     id: 1,
     title: "shrimp poke",
-    category: "appetizer",
+    category: "lunch",
     price: 13.99,
     img: "./images/shrimp-poke-plate.jpg",
     desc: `Shrimp diced fresh with greens and rice, Oh so yummy! `,
@@ -18,7 +18,7 @@ const menu = [
   {
     id: 3,
     title: "haupia stuffed malasada",
-    category: "deserts",
+    category: "desert",
     price: 6.99,
     img: "./images/malasada's.png",
     desc: `Fresh hot Haupia coconut cream stuffed Portugese donut.`,
@@ -74,10 +74,34 @@ const menu = [
   {
     id: 10,
     title: "panipopo (sweet roll in coconut milk sauce)",
-    category: "appetizer",
-    price: 18.99,
+    category: "desert",
+    price: 6.99,
     img: "./images/hawaiian-sweet-rolls-taro.jpg",
     desc: `Sink your teeth in Samoa's most favoured desert. Soaked in fresh coconut milk steamed into a creay sauce. `,
+  },
+  {
+    id: 11,
+    title: "teriyaki meat balls",
+    category: "appetizer",
+    price: 8.99,
+    img: "./images/teriyaki-balls-appetizer.jpg",
+    desc: `Start with traditional style Teriyaki meat balls cooked to perfection. `,
+  },
+  {
+    id: 12,
+    title: "hawaiian pizza sliders",
+    category: "appetizer",
+    price: 12.99,
+    img: "./images/Hawaiian-Pizza-Sliders-3.jpg",
+    desc: `Enjoy a local favorite, Hawaiian honey ham and cheese sliders with pinapple in Hawaiian Sweet Rolls. `,
+  },
+  {
+    id: 13,
+    title: "grilled Hawaiian Keilbasa",
+    category: "appetizer",
+    price: 8.99,
+    img: "./images/glazed-hawaiian-Kielbasa.jpg",
+    desc: `Sweet and savory, perfect for any starter dish. `,
   },
 ];
 
@@ -87,22 +111,30 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
-  // displayMenuButtons();
 });
 
 // filter buttons
 
 filterBtns.forEach(function (btn) {
   btn.addEventListener("click", function (e) {
-    const categories = e.currentTarget.dataset.id;
-    
+    const category = e.currentTarget.dataset.id;
+    const menuCategory = menu.filter(function (menuItem) {
+      if (menuItem.category === category) {
+        return menuItem;
+      }
+    });
+    if (category === "all") {
+      displayMenuItems(menu);
+    } else {
+      displayMenuItems(menuCategory);
+    }
   });
 });
 
 // main menu items to appear function
 
 function displayMenuItems(menuItems) {
-  let displayMenu = menu.map(function (item) {
+  let displayMenu = menuItems.map(function (item) {
     return `<article class="menu-item">
           <img
             src=${item.img}

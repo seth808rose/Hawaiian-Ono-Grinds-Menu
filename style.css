@@ -8,6 +8,8 @@
 body {
   background: hsl(210, 36%, 96%);
   color: hsl(209, 50%, 37%);
+  display: grid;
+  place-items: center;
 }
 
 .section-center {
