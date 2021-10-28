@@ -113,28 +113,9 @@ window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
 });
 
-// filter buttons
-
-filterBtns.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    const category = e.currentTarget.dataset.id;
-    const categoryGroup = menu.filter(function (menuGroup) {
-      if (menuGroup.category === category) {
-        return menuGroup;
-      }
-    });
-    if (category === "all") {
-      displayMenuItems(menu);
-    } else {
-      displayMenuItems(categoryGroup);
-    }
-  });
-});
-
-// main menu items to appear function
-
-function displayMenuItems(menuItems) {
-  let displayMenu = menuItems.map(function (item) {
+// display Menu Page
+function displayMenuItems(menuItem) {
+  let displayMenu = menuItem.map(function (item) {
     return `<article class="menu-item">
           <img
             src=${item.img}
@@ -158,3 +139,19 @@ function displayMenuItems(menuItems) {
   displayMenu = displayMenu.join("");
   sectionCenter.innerHTML = displayMenu;
 }
+
+filterBtns.forEach(function (btn) {
+  btn.addEventListener("click", function (e) {
+    const category = e.currentTarget.dataset.id;
+    const menuGroups = menu.filter(function (menuGroup) {
+      if (menuGroup.category === category) {
+        return menuGroup;
+      }
+    });
+    if (category === "all") {
+      displayMenuItems(menu);
+    } else {
+      displayMenuItems(menuGroups);
+    }
+  });
+});
